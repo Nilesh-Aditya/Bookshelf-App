@@ -2,7 +2,7 @@
 
 ## A Web app made for book lovers
 
-### :zap: [Site Link](https://localhost:3000)
+### :zap: [Site Link](https://bookshell-app.herokuapp.com/)
 
 # Available Scripts
 

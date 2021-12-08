@@ -1,45 +1,50 @@
+import { useState } from "react";
 import { useLocation } from "react-router";
 import '../css/book.css'
 import Navbar from "./navbar";
 
-const insertBookmark = (text) => {
-    const len = text.length > 80 ? 80 : text.length
-    const li = document.createElement('span');
-    li.innerHTML = 
-    `
-    <li class="bg-success"> 
-    ${text.slice(0, len)}....
-    </li>
-    `;
-    const insert  = document.querySelector('.insert-bookmark').appendChild(li); 
-}
-const updateBookmark = () => {
-    let selection = window.getSelection().toString();
-    let wrappedselection = '<span class="accent text-danger bg-warning">' + selection + '</span>';
-    // document.execCommand('insertHTML', false, wrappedselection);
-    let sel = window.getSelection();
-    let range;
-    if (sel.rangeCount && sel.getRangeAt) {
-      range = sel.getRangeAt(0);
-    }
-    // Set design mode to on
-    document.designMode = "on";
-    if (range) {
-      sel.removeAllRanges();
-      sel.addRange(range);
-    }
-    console.log(range, '\n', sel);
-    // Colorize text
-    // document.execCommand("ForeColor", false, "red");
-    document.execCommand('insertHTML', false, wrappedselection);
-
-    // Set design mode to off
-    document.designMode = "off";
-    insertBookmark(selection);
-  
-}
-
 const Book = (props) => {
+    const [count, setCount] = useState(1);
+    const insertBookmark = (text) => {
+        const len = text.length > 80 ? 80 : text.length
+        const li = document.createElement('div');
+        li.innerHTML = 
+        `
+        <li class="bg-success"> 
+         ${count}. 
+        ${text.slice(0, len)}....
+        </li>
+        </ br>
+        `;
+        const insert  = document.querySelector('.insert-bookmark').appendChild(li); 
+        setCount(count + 1);
+    }
+    const updateBookmark = () => {
+        let selection = window.getSelection().toString();
+        let wrappedselection = `<span class="accent text-danger bg-warning" id="${count}">` + selection + '</span>';
+        // document.execCommand('insertHTML', false, wrappedselection);
+        let sel = window.getSelection();
+        let range;
+        if (sel.rangeCount && sel.getRangeAt) {
+        range = sel.getRangeAt(0);
+        }
+        // Set design mode to on
+        document.designMode = "on";
+        if (range) {
+        sel.removeAllRanges();
+        sel.addRange(range);
+        }
+        console.log(range, '\n', sel);
+        // Colorize text
+        // document.execCommand("ForeColor", false, "red");
+        document.execCommand('insertHTML', false, wrappedselection);
+
+        // Set design mode to off
+        document.designMode = "off";
+        insertBookmark(selection);
+    
+    }
+
     console.log(props);
     const { state } = useLocation();
     console.log();

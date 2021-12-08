@@ -1,0 +1,95 @@
+.Login {
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(-11.16%, rgba(0, 0, 0, 0.78)), color-stop(16.6%, #f3be00)); */
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.78) -11.16%, #f3be00 16.6%); */
+    min-height: 100vh;
+  }
+  
+  .log-bg {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 125, 0, 0.2)), to(rgba(125, 125, 0, 0.2))), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), no-repeat fixed center;
+    background: linear-gradient(rgba(125, 125, 0, 0.2), rgba(125, 125, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), no-repeat fixed center;
+    background-size: cover;
+    height: 70vh;
+    margin: 10px auto;
+    width: 26%;
+    border-radius: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #f9960c;
+    overflow: hidden;
+    font-family: "Pacifico", cursive;
+    font-size: 32px;
+  }
+  
+  .log-bg form {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5%;
+  }
+  
+  .log-bg form .email-login,
+  .log-bg form .pass-login,
+  .log-bg form .log-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .log-bg form .email-login input,
+  .log-bg form .pass-login input,
+  .log-bg form .log-btn input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+  }
+  
+  .log-bg form .email-login button,
+  .log-bg form .pass-login button,
+  .log-bg form .log-btn button {
+    width: 100%;
+    background: rgba(249, 150, 12, 0.87);
+    outline: none;
+    border: none;
+    padding: 20px 0px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .log-bg form .log-btn {
+    margin-top: 50px;
+  }
+  

@@ -1,6 +1,8 @@
 const express = require('express');
 const { Books } = require('../../models/books');
 
+const route = express.Router();
+
 // get all the books
 route.get('/', async (req, res) => {
     try {
@@ -27,4 +29,5 @@ route.get('/:name', async(req, res) => {
     }
 })
 
-const route = express.Router();
+
+module.exports = route;

@@ -9,7 +9,7 @@ const route = express.Router();
 
 
 route.get('/', (req, res) => { 
-    res.render('login', { title: "login" , style : 'login', errors : []});
+    res.json({login:"login api"});
 });
 
 route.post('/',express.json(), async (req, res) => {

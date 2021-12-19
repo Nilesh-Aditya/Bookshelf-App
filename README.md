@@ -28,7 +28,7 @@ $ npm start
 $ npm run client
 ```
 
-> ### Visit [localhost:3000](https://localhost:3000) to see the IL-MUSIC in Action
+> ### Visit [localhost:3000](https://localhost:3000) to see the BookShelf-App in Action
 
 ---
 

@@ -1,4 +1,4 @@
-# Bookshelf-App (In Progresss..)
+# Bookshelf-App
 
 ## A Web app made for book lovers
 
